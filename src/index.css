@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.selectBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn{
+  width: 150px;
+  height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn.selected{
+  background: hsl(240, 40%, 80%);
+}
