@@ -30,8 +30,11 @@ class App extends React.Component {
     const recipes = this.state.recipes.map(e=> e.recipeName);
     return(
       <div className="App">
-          <RecipeList onClick={this.handleSelectItem} names={recipes} selectValue={this.state.selected}/>
-          <RecipeDetail detail={this.state.recipes[this.state.selected]}/>
+          <div className="header">Recipe Box</div>
+          <div className="recipeContainer">
+            <RecipeList onClick={this.handleSelectItem} names={recipes} selectValue={this.state.selected}/>
+            <RecipeDetail detail={this.state.recipes[this.state.selected]}/>
+          </div>
       </div>
     )
   }

@@ -12,13 +12,47 @@ code {
     monospace;
 }
 
-.selectBox{
+.App{
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header{
+  font-size: 1.5rem;
+}
+
+.recipeContainer{
   display: flex;
   flex-wrap: wrap;
 }
 
+.recipeContainer div{
+  margin: 5px;
+}
+
+
+.selectBox{
+  background: hsl(240, 40%, 70%);
+  flex-basis: 300px;
+  flex: 1;
+  height: 90vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ingredients, .directions{
+  width: 450px;
+}
+
 .btn{
-  width: 150px;
+  width: calc(100% - 4px);
+  margin: 2px;
   height: 40px;
   font-size: 1.2em;
   cursor: pointer;
@@ -28,4 +62,28 @@ code {
 
 .btn.selected{
   background: hsl(240, 40%, 80%);
+}
+
+.head{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.body div{
+  margin:5px
+}
+
+.recipeDetail{
+  flex-basis: 450px;
+  flex: 2;
+}
+
+@media (max-width: 800px){
+  .selectBox, .recipeDetail{
+    flex-basis: 100%;
+    height: auto;
+  }
+  .ingredients, .directions{
+    width: auto;
+  }
 }
