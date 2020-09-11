@@ -1,5 +1,4 @@
-{
-    "recipes":[
+export const recipes = [
         {
             "recipeName" : "Artichoke Pasta",
             "ingredients" : [
@@ -34,4 +33,3 @@
             ]
         }
     ]
-}

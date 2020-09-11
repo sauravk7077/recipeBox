@@ -28,17 +28,18 @@ code {
 .recipeContainer{
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
-.recipeContainer div{
+.recipeContainer>div{
   margin: 5px;
 }
 
 
 .selectBox{
   background: hsl(240, 40%, 70%);
+  padding: 5px 0;
   flex-basis: 300px;
-  flex: 1;
   height: 90vh;
   display: flex;
   flex-flow: column wrap;
@@ -50,18 +51,57 @@ code {
   width: 450px;
 }
 
-.btn{
+.select{
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: calc(100% - 4px);
-  margin: 2px;
+  margin: 0 ;
   height: 40px;
-  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: hsl(240, 40%, 80%);
+}
+.select div{
+  border-radius: 2px;
+  margin: 0;
+  flex-basis: 200px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1em;
+}
+
+.select button{
+  color: hsl(240, 40%, 50%);
+  margin: 4px;
+  font-size: 12px;
+}
+
+
+.select .selected{
+  background: #fff;
+}
+
+.btn{
+  display: none;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   border: none;
   outline: none;
 }
+.btn:hover{
+  background-color: rgb(199, 199, 199);
+}
 
-.btn.selected{
-  background: hsl(240, 40%, 80%);
+.btn.show{
+  display: inline;
 }
 
 .head{
@@ -78,10 +118,30 @@ code {
   flex: 2;
 }
 
+
+.dialog{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(41, 41, 41, 0.7);
+}
+
+.dialog.show{
+  display: flex;
+}
+
+
 @media (max-width: 800px){
   .selectBox, .recipeDetail{
     flex-basis: 100%;
     height: auto;
+  }
+  .select div{
+    flex-basis: 80%;
   }
   .ingredients, .directions{
     width: auto;
