@@ -4,12 +4,12 @@ import {faTrashAlt, faEdit, faPlusSquare} from "@fortawesome/free-solid-svg-icon
 
 function RecipeList(props) {
     const names = props.names.map((e,i)=>(
-        <div className="select">
-        <div className={(i==props.selectValue?' selected':'')} key={i} onClick={_=>props.onClick(i)}>
+        <div className="select" key={i}>
+        <div className={(i===props.selectValue?' selected':'')} onClick={_=>props.onClick(i)}>
             {e}
         </div>
-        <button className={'btn' + (i==props.selectValue?' show':' hide')} onClick={_=>props.delete(i)}><FontAwesomeIcon icon={faTrashAlt}/></button>
-        <button className={'btn' + (i==props.selectValue?' show':' hide')} onClick={_=>props.modify(i)}><FontAwesomeIcon icon={faEdit}/></button>
+        <button className={'btn' + (i===props.selectValue?' show':' hide')} onClick={_=>props.delete(i)}><FontAwesomeIcon icon={faTrashAlt}/></button>
+        <button className={'btn' + (i===props.selectValue?' show':' hide')} onClick={_=>props.modify(i)}><FontAwesomeIcon icon={faEdit}/></button>
         </div>
     ))
     return(

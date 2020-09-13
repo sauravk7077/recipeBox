@@ -1,12 +1,11 @@
 import React from "react";
 
 function RecipeDetail(props) {
-    let ing, name, dir;
+    let ing, dir;
     if(props.detail){
         ing = props.detail.ingredients.map((a,i)=>(
             <li key={i}>{a}</li>
         ));
-        name = props.detail.recipeName;
         dir = props.detail.directions.map((a,i)=>(
             <li key={i}>{a}</li>
         ));
