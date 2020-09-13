@@ -129,6 +129,7 @@ code {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: default;
   margin-top: auto;
 }
 
