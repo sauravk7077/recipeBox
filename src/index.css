@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap');
-
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -8,134 +6,177 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App{
+.App {
   --base: #9494d1;
   margin: 0;
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header{
+.header {
   margin: 10px;
   font-size: 1.7rem;
   font-family: 'Libre Baskerville', serif;
 }
 
-.recipeContainer{
+.recipeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
-.recipeContainer>div{
+.recipeContainer>div {
   margin: 10px;
 }
 
-
-.selectBox{
+.selectBox {
   background: var(--base);
   padding: 5px 0;
-  flex-basis: 300px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.ingredients, .directions{
+.ingredients,
+.directions {
   width: 450px;
 }
 
-.select{
+.select {
   border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: calc(100% - 4px);
-  margin: 0 ;
+  margin: 0;
   height: 40px;
   cursor: pointer;
   border: none;
   outline: none;
   background: hsl(240, 40%, 80%);
 }
-.select div{
+
+.select div {
   border-radius: 2px;
   margin: 0;
-  flex-basis: 200px;
-  box-sizing: border-box;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   font-size: 1em;
 }
 
-.select button{
+.select button {
   color: hsl(240, 40%, 50%);
   margin: 4px;
   font-size: 12px;
 }
 
-
-.select .selected{
-  box-sizing: border-box;
+.select .selected {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #fff;
 }
 
-.toolbar{
+.toolbar {
   background-color: #fff;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: auto;
 }
 
-.btn{
+.btn {
   width: 25px;
   height: 25px;
   cursor: pointer;
   border: none;
   outline: none;
 }
-.btn:hover{
+
+.btn:hover {
   background-color: rgb(199, 199, 199);
 }
 
-.btn.show{
+.btn.show {
   display: inline;
 }
 
-.btn.hide{
+.btn.hide {
   display: none;
 }
 
-.head{
+.head {
   font-weight: 600;
   font-size: 1.2rem;
 }
 
-.body div{
-  margin:5px
+.body div {
+  margin: 5px
 }
 
-.recipeDetail{
-  flex-basis: 450px;
-  flex: 2;
+.recipeDetail {
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
-
-.dialog{
+.dialog {
   display: none;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -143,22 +184,33 @@ code {
   background-color: rgba(41, 41, 41, 0.7);
 }
 
-.dialog.show{
+.dialog.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.modal{
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 35vw;
   height: 50vh;
   background-color: hsl(240, 40%, 60%);
   border: 1px solid #fff;
 }
 
-.modal button{
+.modal button {
   width: auto;
   margin: 5px;
 }
@@ -171,11 +223,29 @@ input[type='text'] {
   border-bottom: 1px solid #fff;
 }
 
-textarea::placeholder, input::placeholder{
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
   color: rgb(202, 202, 202);
 }
 
-textarea, input{
+textarea::-moz-placeholder, input::-moz-placeholder {
+  color: rgb(202, 202, 202);
+}
+
+textarea:-ms-input-placeholder, input:-ms-input-placeholder {
+  color: rgb(202, 202, 202);
+}
+
+textarea::-ms-input-placeholder, input::-ms-input-placeholder {
+  color: rgb(202, 202, 202);
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgb(202, 202, 202);
+}
+
+textarea,
+input {
   margin: 5px;
   font-family: 'Roboto', sans-serif;
   width: 30vw;
@@ -186,23 +256,26 @@ textarea, input{
   background-color: hsl(240, 40%, 50%);
 }
 
-
-@media (max-width: 800px){
-  .selectBox, .recipeDetail{
-    flex-basis: 100%;
-    height: auto;
+@media (max-width: 800px) {
+  .selectBox,
+  .recipeDetail {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+      height: auto;
   }
-  .select div{
-    flex-basis: 80%;
+  .select div {
+      -ms-flex-preferred-size: 80%;
+          flex-basis: 80%;
   }
-  .ingredients, .directions{
-    width: auto;
+  .ingredients,
+  .directions {
+      width: auto;
   }
 }
 
-@media (min-width: 1400px){
-  .App{
-    width: 1400px;
-    margin: auto;
+@media (min-width: 1400px) {
+  .App {
+      width: 1400px;
+      margin: auto;
   }
 }
