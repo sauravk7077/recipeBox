@@ -206,7 +206,8 @@ code {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 35vw;
-  height: 50vh;
+  height: 55vh;
+  color: #fff;
   background-color: hsl(240, 40%, 60%);
   border: 1px solid #fff;
 }
@@ -272,6 +273,34 @@ input {
   .directions {
       width: auto;
   }
+  .modal{
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  .btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .modal .btn{
+    width: 80vw;
+  }
+  .modal .head{
+    margin: 5px;
+  }
+  input[type='text'], textarea{
+    width: 95vw;
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+  input[type='text']{
+    height: 40px;
+  }
+  textarea{
+    height: 200px;
+  }
+
 }
 
 @media (min-width: 1400px) {

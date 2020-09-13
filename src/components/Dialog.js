@@ -4,6 +4,9 @@ function Dialog (props) {
   return (
       <div className={'dialog' + (props.dialogShow ? ' show' : '')}>
         <div className="modal">
+          <div className="head">
+            Enter your recipe details here.
+          </div>
           <div>
             <input
               className="resName"
@@ -29,7 +32,7 @@ function Dialog (props) {
               onChange={e => props.onChange(e, 'dirs')}
           ></textarea>
         </div>
-          <div>
+          <div className="btns">
             <button
             className="btn"
               onClick={props.save}
